@@ -1,0 +1,75 @@
+<% layout("/layouts/boilerplate") -%>
+<body>
+    <!-- <form action="/listings/" method="post">
+    <pre>
+    Title : <input type="text" name="title" >
+    Description : <textarea type="text" name="description"> </textarea>
+    Image Url : <input type="text" name="image" >
+    Price : <input type="text" name="price" >
+    Location : <input type="text" name="location" >
+    Country : <input type="text" name="country">
+    </pre><br>
+    <button type="submit">Submit</button>
+    </form> -->
+    <h2 id="addL">Add Listing</h2>
+    <div class="new-form-box">
+    <form action="/listings/" method="post" novalidate class="needs-validation">
+
+        <div class="row mb-3">
+          <label for="input-title" class="col-sm-2 col-form-label">Title :</label>
+          <div class="col-sm-10">
+            <input type="text" name="title" class="form-control" id="input-title" required>
+            <div class="valid-feedback">
+              Looks fine !
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label for="input-description" class="col-sm-2 col-form-label">Description :</label>
+          <div class="col-sm-10">
+            <textarea class="form-control" name="description" id="input-description" required></textarea>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="input-url" class="col-sm-2 col-form-label">Image Url :</label>
+            <div class="col-sm-10">
+              <input type="text" name="image" class="form-control" id="input-url">
+            </div>
+          </div>
+
+        <div class="row mb-3">
+            <label for="input-price" class="col-sm-2 col-form-label">Price :</label>
+            <div class="col-sm-10">
+              <input type="text" name="price" class="form-control" id="input-price" required>
+              <div class="invalid-feedback">
+                Enter a valid price !
+              </div>
+            </div>
+            
+        </div>
+
+        <div class="row mb-3">
+            <label for="input-location" class="col-sm-2 col-form-label">Location :</label>
+            <div class="col-sm-10">
+              <input type="text" name="location" class="form-control" id="input-location" required>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="input-country" class="col-sm-2 col-form-label">Country :</label>
+            <div class="col-sm-10">
+              <input type="text" name="country" class="form-control" id="input-country" required>
+              <div class="invalid-feedback">
+                Enter a valid country !
+              </div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+      </form>
+    </div>
+
+</body>

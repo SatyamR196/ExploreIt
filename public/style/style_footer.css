@@ -1,0 +1,32 @@
+.foot-contain{
+    margin-top: auto;
+}
+.foot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgb(106, 104, 103);
+    min-height: 50px;
+    padding-inline: 5px;
+    margin-inline: 30px;
+    gap: 15px;
+    background-color: hsl(0, 4%, 93%);
+}
+#copynames a{
+    text-decoration: none;
+    color:hsl(240, 100%, 27%);
+}
+#copynames a:hover{
+    text-decoration: underline;
+    color:hsl(240, 66%, 60%);
+}
+#icons i{
+    font-size: larger;
+    color: darkblue;
+
+}
+#icons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}

@@ -1,0 +1,68 @@
+<% layout("/layouts/boilerplate") -%>
+<head>
+    <link rel="stylesheet" href="/style/pico.conditional.red.min.css"> 
+</head>
+<body>
+    <h2 id="showT"><%= place.title %></h2>
+    <!-- <img src="<%= place.image %>" alt="Pictures of place"> -->
+    <div class="show-box">
+     <div class="picture">
+        <img src="<%= place.image %>" class="img-fluid rounded" alt="img-fluid"><br>
+        <caption><%= place.description %></caption>
+     </div>
+    <!-- <Details><%= place.description %></Details> -->
+    <ul>
+        <li>Price : &#8377;<%= place.price.toLocaleString("en-IN") %></li>
+        <li>Location : <%= place.location %></li>
+        <li>Country : <%= place.country %></li>
+    </ul>
+    <div id="edit-btn">
+        <a href="/listings/<%= place._id %>/edit"><button class="btn btn-info">Edit</button></a>
+        <form action="/listings/<%= place._id %>?_method=DELETE" method="post">
+            <button class="btn btn-outline-danger">Delete</button>
+        </form>
+    </div>
+    </div>
+    <div class="pico" id="review-form">
+        <form action="/listings/<%=place._id%>/reviews" method="post" >
+        <details role="button" class="outline">
+            <summary><strong> Write a Review </strong></summary>
+            <label for="">
+                Rating : <input type="range" name="review[rating]" min="1" max="5">
+            </label>
+            <label for="">
+                Comments : <textarea name="review[comment]" id="" cols="30" rows="5" required></textarea>
+            </label>
+            <button type="submit">submit</button>
+        </details>
+        </form>
+    </div>
+    
+    <div class="pico" id="review-all">
+        <details role="button" class="outline">
+            <summary><strong> All Reviews </strong></summary>
+            <% let rows = Math.ceil(place.reviews.length/3); %>
+            <% let count= 1; %> 
+            
+            <% for( let index = 1; index <= rows; index++ ) { %>
+                <div class="grid">
+                    <% while( count <= index*3 && count<=place.reviews.length) { %>
+                        <% console.log(place.reviews[count-1].rating); %>
+                        <article>
+                            <header>Id : <%= place.reviews[count-1]._id %></header>
+                            <%= place.reviews[count-1].rating %> Stars<br>
+                            <%= place.reviews[count-1].comment %>
+                            <footer>
+                                <form action="/listings/<%=place._id%>/reviews/<%= place.reviews[count-1]._id %>?_method=DELETE" method="post">
+                                    <button type="submit">Delete</button>
+                                </form>
+                            </footer>
+                        </article>
+                        <% count++; %>
+                    <% } %>
+                </div>
+            <% } %>
+            
+        </details>
+    </div>
+</body>

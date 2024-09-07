@@ -1,0 +1,21 @@
+<% layout("/layouts/boilerplate") -%>
+<body>
+    <h1>All Listings</h1><br>
+    <div class="card-container">
+    <% for( let place of allListings ) { %>
+    <a href="/listings/<%=place._id %>">
+        <div class="container-box">
+            <div class="image-box">
+                <img src="<%= place.image %>" alt="Pictures of place">
+            </div>
+            <div class="content">
+                <%=place.title %> <br>
+                <%=place.location %>, <%=place.country %> <br>
+                &#8377;<%= place.price.toLocaleString("en-IN") %> / night
+            </div>
+        </div>
+    </a>
+    <% } %>
+    </div>
+    
+</body>

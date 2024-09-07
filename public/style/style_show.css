@@ -1,0 +1,36 @@
+.picture{
+    margin: auto;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.picture img{
+    width: 100%;
+    aspect-ratio: 12/9;
+}
+.picture img { @media screen and (min-width:768px) {
+    width : 70%;
+    aspect-ratio: 12/8;
+}
+}
+#edit-btn{
+    /* border: 2px solid blueviolet; */
+    display: flex;
+    gap:50px;
+    width: fit-content;
+    margin-inline:auto;
+    margin-bottom: 25px;
+    
+}
+#showT{
+    text-align: center;
+    margin-top: 5px;
+}
+#review-form{
+    max-width: 60%;
+    /* width: clamp(100%,60vw,60%) !important; */
+    margin: auto;
+}
+
