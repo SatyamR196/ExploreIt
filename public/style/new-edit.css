@@ -1,0 +1,13 @@
+.new-form-box{
+    margin-block: 20px;
+    /* background-color: aquamarine; */
+    height: 100%;
+    /* margin-bottom: 50px; */
+    padding-inline: 10px;
+    text-align: center;
+    place-content: center;
+}
+#addL{
+    text-align: center;
+    margin-top: 5px;
+}

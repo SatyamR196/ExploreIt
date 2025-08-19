@@ -1,0 +1,47 @@
+.foot-contain{
+    margin-top: auto;
+}
+.foot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgb(106, 104, 103);
+    min-height: 50px;
+    padding-inline: 5px;
+    margin-inline: 30px;
+    gap: 15px;
+    background-color: hsl(0, 4%, 93%);
+}
+#copynames a{
+    text-decoration: none;
+    color:hsl(240, 100%, 27%);
+}
+#copynames a:hover{
+    text-decoration: underline;
+    color:hsl(240, 66%, 60%);
+}
+#icons i{
+    font-size: larger;
+    color: hsl(240, 100%, 27%);
+}
+#icons i:hover{
+    /* color: hsl(240, 1%, 53%); */
+    color: hsl(180, 1%, 62%);
+}
+#icons #yt:hover{
+    color: #ec002f;
+}
+#icons #tw:hover{
+    color: #56bbff;
+}
+#icons #ins:hover{
+    color: #9725A8;
+}
+#icons #fb:hover{
+    color: hsl(224, 90%, 55%);
+}
+#icons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}

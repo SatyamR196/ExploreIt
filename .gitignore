@@ -1,0 +1,26 @@
+# Node.js dependencies
+node_modules/
+
+#demo docs
+*.docx
+Demo Video Link.docx
+
+# Build output
+dist/
+build/
+
+# Logs
+*.log
+
+# Environment variables
+.env
+
+# MacOS files
+.DS_Store
+
+# Windows files
+Thumbs.db
+
+# IDE specific files
+.vscode/
+.idea/
